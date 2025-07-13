@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yamini Nagothu Portfolio</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .name {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      font-size: 1.2em;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+      border-bottom: 2px solid #ff6347;
+    }
+
+    /* Hero Section */
+    #hero {
+      background-color: #f4f4f4;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-image img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .hero-text {
+      max-width: 800px;
+    }
+
+    section {
+      padding: 50px 20px;
+      margin: 50px 0;
+    }
+
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-box {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px 0;
+      width: 80%;
+      box-sizing: border-box;
+    }
+
+    #projects .project {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="name">YAMINI NAGOTHU</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="hero-container">
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Yamini Nagothu">
+    </div>
+    <div class="hero-text">
+      <h1>Welcome to My Portfolio</h1>
+      <p>I am Yamini, a motivated computer science student with strong foundational knowledge in C, C++, HTML, data structures,
+        and database management systems. I am eager to apply my technical skills and problem-solving abilities in a dynamic work
+        environment. Passionate about continuous learning and looking to contribute to innovative projects while gaining hands-on
+        experience in software development.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p><b>I am a passionate computer science student looking to use my knowledge, skills, and commitment to contribute to the growth of organizations.</b></p>
+  <div class="about-container">
+    <div class="about-box">
+      <h3>Education</h3>
+      <ul>
+        <li>2023-2027: B.Tech (current)<br>SRM University / CGPA: 6.9</li><br>
+        <li>2021-2023: Intermediate<br>Bhashyam Junior College / 85%</li><br>
+        <li>2021: SSC<br>Bhashyam / 100%</li>
+      </ul>
+    </div>
+    <div class="about-box">
+      <h3>Skills</h3>
+      <ul>
+        <li>C Language</li><br>
+        <li>C++</li><br>
+        <li>Data Structures</li><br>
+        <li>Database Management System (DBMS)</li><br>
+        <li>Frontend (HTML, CSS, JavaScript)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>Employee Management System in C</h3>
+    <p>A software application to manage employee data with CRUD operations using C.</p>
+  </div>
+  <div class="project">
+    <h3>Scientific Calculator using C++</h3>
+    <p>Performs advanced mathematical operations essential for engineering and science applications.</p>
+  </div>
+  <div class="project">
+    <h3>Restaurant Management System (RMS) using DBMS</h3>
+    <p>Streamlines restaurant operations such as orders, inventory, and staff management through a database-driven system.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:nagothuyamini4848@gmail.com">nagothuyamini4848@gmail.com</a></p>
+  <p>Phone: 9000217196</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/yamini-nagothu-28b264291" target="_blank">LinkedIn Profile</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2024 Yamini Nagothu. All rights reserved.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
